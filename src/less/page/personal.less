@@ -1,0 +1,62 @@
+/*
+ * 个人中心页
+*/
+
+@import "../variable"; //变量部分
+@import "../common/common"; //公用样式
+@import "../component/header-sub";
+@import "../component/header-search";
+@import "../component/nav";
+@import "../component/slide";
+
+.container_wrapper{
+	.section{
+		padding-left: 20px;
+		padding-top: 26px;
+		padding-right: 28px;
+		overflow: hidden;
+		.title{
+			margin-bottom: 10px;
+			font-size: 16px;
+			color: #464950;
+		}
+		.date{
+			margin-bottom: 12px;
+			font-size: 12px;
+			color: #999999;
+		}
+		.list{
+			width: 100%;
+			ul{
+				overflow: hidden;
+				border-left: 1px solid #dfe1e7;
+				border-top: 1px solid #dfe1e7;
+				.item{
+					float: left;
+					width: 25%;
+					height: 214px;
+					text-align: center;
+					box-sizing: border-box;
+					padding-top: 5px;
+					border-right: 1px solid #dfe1e7;
+					border-bottom: 1px solid #dfe1e7;
+					a{
+						img{
+							display: inline-block;
+						}
+						.item_title{
+							margin: 3px 0 12px 0;
+							font-size: 16px;
+							font-weight: bold;
+							color: #4f5a6b;
+						}
+						.text{
+							font-size: 12px;
+							color: #999999;
+						}
+					}
+				}
+			}
+		}
+	}
+}

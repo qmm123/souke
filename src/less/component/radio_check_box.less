@@ -1,0 +1,101 @@
+/**
+ * 组件--单选框和复选框样式
+ */
+
+// 多选按钮样式(带文字)
+.checkbox_style{
+	cursor: pointer;
+	&.on{
+		.con{
+			background-image: url("@{img_url}/radio_check_box/check_1_on.png");
+		}
+	}
+	&.fl{
+		float: left;
+		margin-right: 20px;
+	}
+	// 文字
+	.con{
+		color: #333;
+		background: url("@{img_url}/radio_check_box/check_1.png") no-repeat left center;
+		padding-left: 28px;
+	}
+	// 表单项
+	.check_box{
+		display: none;
+	}
+}
+
+// 多选按钮样式(不带文字)
+.checkbox_style_no_txt{
+	width: 12px;
+	height: 12px;
+	background: url("@{img_url}/radio_check_box/check_1.png") no-repeat 0 0;
+	cursor: pointer;
+	&.center{
+		margin: 0 auto;
+	}
+	&.on{
+		background-image: url("@{img_url}/radio_check_box/check_1_on.png");
+	}
+	&.fl{
+		float: left;
+	}
+	// 文字
+	.con{
+		color: #666;
+	}
+	// 表单项
+	.check_box{
+		display: none;
+	}
+}
+
+// 单选按钮样式
+.radiobox_style{
+	cursor: pointer;
+	&.fl{
+		float: left;
+	}
+	&.on{
+		.con{
+			color: #27b2fb;
+			background-image: url("@{img_url}/radio_check_box/radio_1_on.png");
+		}
+	}
+	// 间距设置
+	.mar_l_10{
+		margin-left: 10px;
+	}
+	// 文字区域
+	.con{
+		color: #C1C1C1;
+		background: url("@{img_url}/radio_check_box/radio_icon.png") no-repeat left center;
+		margin-right: 10px;
+		padding: 0 0 0 19px;
+	}
+	// 表单项
+	.radio{
+		display: none;
+	}
+}
+
+// 单选按钮样式--不带左边的图标和文本
+.radiobox_style_no_icon{
+	border: 1px solid #e7e7e7;
+	cursor: pointer;
+	&.fl{
+		float: left;
+	}
+	&.on{
+		border-color: #2790e9;
+	}
+	// 间距设置
+	.mar_l_10{
+		margin-left: 10px;
+	}
+	// 表单项
+	.radio{
+		display: none;
+	}
+}

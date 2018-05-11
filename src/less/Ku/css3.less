@@ -1,0 +1,134 @@
+//== 圆角度设置
+//
+//## border-radius
+
+// 四个角
+.bor-rad(@rad:5px){
+	-webkit-border-radius: @rad;
+     -moz-border-radius: @rad;
+          border-radius: @rad;
+}
+
+// 单角
+// 左上
+.bor-t-l-rad(@rad: 5px) {
+  -webkit-border-top-left-radius: @rad;
+      -moz-border-radius-topleft: @rad;
+          border-top-left-radius: @rad;
+}
+// 右上
+.bor-t-r-rad(@rad: 5px) {
+  -webkit-border-top-right-radius: @rad;
+      -moz-border-radius-topright: @rad;
+          border-top-right-radius: @rad;
+}
+// 左下
+.bor-b-l-rad(@rad: 5px) {
+  -webkit-border-bottom-left-radius: @rad;
+      -moz-border-radius-bottomleft: @rad;
+          border-bottom-left-radius: @rad;
+}
+// 右下
+.bor-b-r-rad(@rad: 5px) {
+  -webkit-border-bottom-right-radius: @rad;
+      -moz-border-radius-bottomright: @rad;
+          border-bottom-right-radius: @rad;
+}
+
+// 单边
+// 上边
+.bor-t-rad(@rad: 5px) {
+  .bor-t-r-rad(@rad);
+  .bor-t-l-rad(@rad);
+}
+// 下边
+.bor-b-rad(@rad: 5px) {
+  .bor-b-r-rad(@rad);
+  .bor-b-l-rad(@rad);
+}
+// 左边
+.bor-l-rad(@rad: 5px) {
+  .bor-t-l-rad(@rad);
+  .bor-b-l-rad(@rad);
+}
+// 右边
+.bor-r-rad(@rad: 5px) {
+  .bor-t-r-rad(@rad);
+  .bor-b-r-rad(@rad);
+}
+
+//== 不透明度设置
+//
+//## opacity
+.opa(@opacity:0.5) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+//== 阴影设置
+//
+//## box-shadow
+.box-s(@hor:0;@ver:3px; @fou:5px; @col:#d2d2d2;){
+  -webkit-box-shadow: @hor @ver @fou @col;
+  -moz-box-shadow: @hor @ver @fou @col;
+  box-shadow: @hor @ver @fou @col;
+}
+
+//== 输入框placeholder占位符颜色
+//
+//## 输入框placeholder占位符颜色
+.placeholder-input(@col:#c1c1c1;){
+  input::-webkit-input-placeholder{
+      color: @col;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: @col;
+  }
+
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: @col;
+  }
+
+  input:-ms-input-placeholder{
+      color: @col;
+  }
+}
+
+//== 文本框placeholder占位符颜色
+//
+//## 文本框placeholder占位符颜色
+.placeholder-textarea(@col:#c1c1c1;){
+  textarea::-webkit-input-placeholder{
+      color: @col;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: @col;
+  }
+
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: @col;
+  }
+
+  textarea:-ms-input-placeholder{
+      color: @col;
+  }
+}
+
+//== 文本超出隐藏并加...
+//
+//##单行
+.text-overflow(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+//##多行
+.text-overflow-more(@line:2;){
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @line;
+  -webkit-box-orient: vertical;
+}

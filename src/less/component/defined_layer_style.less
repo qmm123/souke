@@ -1,0 +1,45 @@
+/**
+ * 组件--layer弹窗自定义-公用部分
+ */
+
+.layui-layer{
+	// 通用layer.msg 方法样式定义
+	&.msg_style_define{
+		&.layui-layer-msg{
+			display: inline-block;
+			min-width: 110px;
+			border-radius: 4px;
+			border: none;
+		}
+		.layui-layer-content{
+			text-align: center;
+			padding: 0;
+			p.content_icon_zone{
+				text-align: center;
+				.bor-rad(@rad:4px);
+				padding: 10px 25px;
+				&.success{
+					background-color: #1ABA6F;
+					background-image: linear-gradient(135deg, #27D093 0%, #1ABA6F 100%);
+				}
+				&.fail{
+					background-color: #DB391E;
+					background-image: linear-gradient(135deg, #FC6E51 0%, #DB391E 100%);
+				}
+			}
+			span.content_icon{
+				color: #fff;
+				display: inline-block;
+				background-repeat: no-repeat;
+				background-position: center left;
+				// padding: 0 0 0 18px;
+				&.success{
+					// background-image: url("../img/msg_icon_success.png");
+				}
+				&.fail{
+					// background-image: url("../img/msg_icon_fail.png");
+				}
+			}
+		}
+	}
+}

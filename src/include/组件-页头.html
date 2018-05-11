@@ -1,0 +1,40 @@
+<!-- 公共头部 1->游客状态 2->登录状态 -->
+@@if(context.type == 1){
+<div class="top">
+  <div class="container">
+    <div class="fr">
+      <div class="wel">
+        您好，<span class="un">13811111111</span>
+      </div>
+      <div id="showtoplist">
+        <div class="unp">
+          <img src="/img/icon/icon_default_head.png" alt="" />
+        </div>
+        <div class="showicon"></div>
+        <ul>
+          <li><a href="javascript:;">个人资料</a></li>
+          <li><a href="javascript:;">修改密码</a></li>
+          <li><a href="javascript:;">修改手机号</a></li>
+        </ul>
+      </div>
+      <div class="wel">
+        <span class="line"></span>
+        <a href="javascript:;">退出</a>
+      </div>
+    </div>
+  </div>
+</div>
+}
+@@if(context.type == 2){
+<div class="top">
+  <div class="container">
+    <div class="fr">
+      <div class="wel">
+        <a href="javascript:;">您好，请登录</a>
+        <span class="line"></span>
+        <a href="javascript:;">免费注册</a>
+      </div>
+    </div>
+  </div>
+</div>
+}

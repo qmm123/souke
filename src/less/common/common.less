@@ -1,0 +1,65 @@
+@import "../variable"; //变量部分
+@import "../Ku/css2"; //混合css2部分
+@import "../Ku/css3"; //混合css3部分
+
+@import "../component/defined_layer_style"; //自定义layer提示封装类
+
+@import "../component/header"; //页头
+@import "../component/footer"; //页脚
+@import "../component/side_bar_right"; //右侧边栏
+
+/**
+ * 公用部分
+ */
+
+// 重置部分
+input,textarea{
+  -webkit-outline: none;
+  -moz-outline: none;
+  -o-outline: none;
+  outline: none;
+}
+
+// ===
+// =宽度部分
+.container{
+	width: @w_container;
+	margin: 0 auto;
+}
+
+.container_wrapper{
+    width: @w_container;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-left: 237px solid #eceff6;
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+      visibility: hidden;
+      height: 0;
+      overflow: hidden;
+    }
+}
+
+// ===
+// =禁用按钮部分
+.disable_btn{
+	color: #fff !important;
+	background: @disable_col_btn_bgc !important;
+	border-color: @disable_col_btn_bgc !important;
+}
+
+// logo
+.logo{
+  float: left;
+  .img,.img_sou,.img_line{
+    float: left;
+  }
+  .img_sou{
+    margin: 26px 0 0 0;
+  }
+  .img_line{
+    margin: 26px 15px 0 15px;
+  }
+}

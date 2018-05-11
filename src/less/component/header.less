@@ -1,0 +1,95 @@
+@topheight: 44px;
+@topbgc: #333333;
+
+.w1000(){
+  width: @w_container;
+  margin: 0 auto;
+  .clearfix;
+}
+
+.top{
+  height: @topheight;
+  background-color: @topbgc;
+  .container{
+    .w1000()
+  }
+  .fr{
+    float: right;
+    .clearfix;
+  }
+
+  .wel{
+    color: #fff;
+    float: left;
+    height: @topheight;
+    line-height: @topheight; 
+    font-size: 12px;
+    a{
+      color: #fff;
+    }
+    .line{
+      width: 1px;
+      height: 12px;
+      background: #bababa;
+      display: inline-block;
+      margin: 0 10px 0 10px;
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  #showtoplist{
+    float: left;
+    .clearfix;
+    position: relative;
+    z-index: 1000;
+
+    ul{
+      display: none;
+      position: absolute;
+      left: -40px;
+      top: @topheight;
+      width: 140px;
+      background-color: rgba(51,51,51,.9);
+      li{
+        a{
+          height: 38px;
+          line-height: 38px;
+          color: #fff;
+          text-align: center;
+          cursor: pointer;
+          display: block;
+          &:hover{
+            background-color: rgba(@col_main_r,@col_main_g,@col_main_b,.9);
+          }
+        }
+      }
+    }
+  }
+
+  .unp{
+    color: #fff;
+    margin-top: 7px;
+    margin-left: 14px;
+    float: left;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    img{
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .showicon{
+    float: left;
+    width: 12px;
+    height: 8px;
+    padding-left: 16px;
+    background: url("../../img/icon/topicon.png") center no-repeat;
+    height: @topheight;
+    color: #8b8b8b;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}

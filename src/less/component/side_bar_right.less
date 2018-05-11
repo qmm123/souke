@@ -1,0 +1,84 @@
+.fixedMenu{
+  position: fixed;
+  right: 20px;
+  top: 50%;
+
+  .kuai{
+    position: relative;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 1px;
+    background-color: @col_main;
+    .icon{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .show{
+      height: 53px;
+      width: 126px;
+      text-align: center;
+      position: absolute;
+      right: 53px;
+      top: 0;
+      background-color: @col_main;
+      p{
+        color: #ffffff;
+      }
+    }
+  }
+
+  .tel {
+    .icon{
+      background: url("../../img/icon/fixedtel.png") center no-repeat;
+    }
+    .show{
+      display: none;
+      p{
+        font-size: 15px;
+        font-weight: bold;
+        &.d{
+          margin-top: 5px;
+        }
+        &.t{
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+  .qq {
+    .icon{
+      cursor: pointer;
+      background: url("../../img/icon/fixedqq.png") center no-repeat;
+    }
+  }
+
+  .erwei {
+    .icon{
+      background: url("../../img/icon/fixederwei.png") center no-repeat;
+    }
+    .show{
+      display: none;
+      height: 136px;
+      p.d{
+        font-size: 15px;
+        font-weight: bold;
+        margin: 8px 0 8px;
+      }
+      .p{
+        width: 84px;
+        height: 84px;
+        margin: 0 auto;
+        background-color: #24bd9a;
+      }
+    }
+  }
+
+  .totop {
+    .icon{
+      cursor: pointer;
+      background: url("../../img/icon/fixedtotop.png") center no-repeat;
+    }
+  }
+}

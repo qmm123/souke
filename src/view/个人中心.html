@@ -1,0 +1,88 @@
+@@include("../include/组件-公共head.html", {
+	"title": "登陆",
+	"css": "page/personal"
+})
+<body>
+	<!-- 头部 -->
+	@@include("../include/组件-头部-登录注册.html")
+	<!-- /头部 -->
+	
+	<!-- 个人中心主体内容 -->
+		<div class="container_wrapper">
+			<!-- 左侧导航 -->
+			@@include("../include/组件-左侧导航栏.html")
+			<!-- /左侧导航 -->
+			<!-- 右侧内容 -->
+			<div class="section">
+				<h3 class="title">
+					中午好，吃完晚饭小憩一会为下午补充能量！
+				</h3>
+				<p class="date">
+					上次登录时间：2015-01-27 08:58:09
+				</p>
+				<div class="list">
+					<ul>
+						<li class="item">
+							<a href="javascript:;">
+								<img src="/img/order_bg_b.png" alt="">
+								<h3 class="item_title">我的订单</h3>
+								<p class="text">查看已报名课程订单记录</p>
+							</a>
+						</li>
+						<li class="item">
+							<a href="javascript:;">
+								<img src="/img/order_bg_y.png" alt="">
+								<h3 class="item_title">我的订单</h3>
+								<p class="text">查看已报名课程订单记录</p>
+							</a>
+						</li>
+						<li class="item">
+							<a href="javascript:;">
+								<img src="/img/student_bg_p.png" alt="">
+								<h3 class="item_title">我的订单</h3>
+								<p class="text">查看已报名课程订单记录</p>
+							</a>
+						</li>
+						<li class="item">
+							<a href="javascript:;">
+								<img src="/img/device_bg_o.png" alt="">
+								<h3 class="item_title">我的订单</h3>
+								<p class="text">查看已报名课程订单记录</p>
+							</a>
+						</li>
+						<li class="item">
+							<a href="javascript:;">
+								<img src="/img/psw_bg_g .png" alt="">
+								<h3 class="item_title">我的订单</h3>
+								<p class="text">查看已报名课程订单记录</p>
+							</a>
+						</li>
+						<li class="item"></li>
+						<li class="item"></li>
+						<li class="item"></li>
+					</ul>
+				</div>
+			</div>
+			<!-- /右侧内容 -->
+		</div>
+	<!-- /个人中心主体内容  -->
+	
+	<!--页脚-->
+	@@include("../include/组件-页脚.html")
+	<script>
+		$('.icon-revise').on('click', function() {
+			var width = $('.input').css('width');
+			var html = $('.input').html();
+			var str = '<input class="input" value="'+html+'">';
+			$('.input').replaceWith(str);
+			$('.input').css('width', width);
+			$('.input')[0].focus();
+		})
+		$('.slide').on('blur', '.input',function() {
+			var val = $(this).val();
+			var width = $(this).css('width');
+			var str = '<div class="input">'+val+'</div>';
+			$(this).replaceWith(str);
+		})
+	</script>
+</body>

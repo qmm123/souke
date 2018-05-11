@@ -1,0 +1,120 @@
+@@include("../include/组件-公共head.html", {
+	"title": "登陆",
+	"css": "page/student"
+})
+<body>
+	<!-- 头部 -->
+	@@include("../include/组件-头部-登录注册.html")
+	<!-- /头部 -->
+	
+	<!-- 个人中心主体内容 -->
+		<div class="container_wrapper">
+			<!-- 左侧导航 -->
+			@@include("../include/组件-左侧导航栏.html")
+			<!-- /左侧导航 -->
+			<!-- 右侧内容 -->
+			<div class="section">
+				<div class="panel">
+					<div class="panel-header">
+						<h3 class="title">
+							求学登记
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="table">
+							<div class="table-header">
+								<div class="table-row">
+									<div class="col1">姓名</div>
+									<div class="col2">性别</div>
+									<div class="col3">手机</div>
+									<div class="col4">E-mail</div>
+									<div class="col5">操作</div>
+								</div>
+							</div>
+							<div class="table-body">
+								<div class="table-row">
+									<div class="col1">天马</div>
+									<div class="col2">男</div>
+									<div class="col3">15637846585</div>
+									<div class="col4">意向学科</div>
+									<div class="col5"><a href="javascript:;" class="update">【修改】</a><a href="javascript:;" class="delete">【删除】</a></div>
+								</div>
+							</div>
+						</div>
+						<div class="form">
+							<form action="">
+								<div class="inline-form">
+									<div class="input-control">
+										<label for="name"><i>*</i>姓名</label>
+										<div class="inner">
+											<input type="text" placeholder="请输入姓名" id="name">
+										</div>
+									</div>
+									<div class="input-control">
+										<label for=""><i>*</i>性别</label>
+										<div class="inner">
+											<input type="radio" class="radio" id="man" name="sex" value="1">
+											<label for="man">男</label>
+											<input type="radio" class="radio" id="woman" name="sex" value="2">
+											<label for="woman">女</label>
+										</div>
+									</div>
+									<div class="input-control">
+										<label for="tel"><i>*</i>手机</label>
+										<div class="inner">
+											<input type="text" placeholder="请输入手机号" id="tel">
+										</div>
+									</div>
+									<div class="input-control">
+										<label for="name">年级</label>
+										<div class="inner">
+											<div class="select">请选择年级</div><i class="icon-sanjiao"></i>
+											<div>
+												<div class="list">
+													<div class="item">一年级1</div>
+													<div class="item">一年级2</div>
+													<div class="item">一年级3</div>
+													<div class="item">一年级4</div>
+													<div class="item">一年5</div>
+													<div class="item">一年级6</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="submit">
+									<a href="javascript:;">保存</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /右侧内容 -->
+		</div>
+	<!-- /个人中心主体内容  -->
+	
+	<!--页脚-->
+	@@include("../include/组件-页脚.html")
+	<script>
+		$('.select').on('click', function() {
+			$('.list').show();
+		})
+		$('.list .item').on('click', function() {
+			$('.list').hide();
+			var val = $(this).html();
+			$('.select').html(val);
+		})
+
+		$('.submit a').on('click', function() {
+			var name = $('#name').val();
+			var sex = $('.radio:checked').val();
+			var tel = $('#tel').val();
+			var grade = $('.select').html();
+			// 提交数据成功
+			var str = '<div class="table-row"><div class="col1">'+name+'</div><div class="col2">'+sex+'</div><div class="col3">'+tel+'</div><div class="col4"></div><div class="col5"></div></div>';
+			$('.table-body').prepend(str);
+			document.documentElement.scrollTop = document.body.scrollTop = 0;
+		})
+	</script>
+</body>

@@ -1,0 +1,135 @@
+/* 
+	个人中心 左侧导航
+ */
+.slide{
+	width: @nav_sub_w;
+	float: left;
+	margin-left: -237px;
+	min-height: 760px;
+	box-sizing: border-box;
+	background: #eceff6;
+	border-left: 1px solid #ccd0d9;
+	border-right: 1px solid #ccd0d9;
+	.title{
+		background: #dfecf4;
+		padding-top: 24px;
+		padding-bottom: 22px;
+		text-align: center;
+		.avator{
+			width: 134px;
+			height: 134px;
+			position: relative;
+			margin-bottom: 24px;
+			display: inline-block;
+			box-sizing: border-box;
+			border: 3px solid #fff;
+			border-radius: 50%;
+			img{
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+			}
+			.photocamera{
+				width: 32px;
+				height: 32px;
+				bottom: 5px;
+				right: 5px;
+				position: absolute;
+				background: url("@{img_url}/photocamera.png") no-repeat;
+			}
+		}
+		.name{
+			.input{
+				display: inline-block;
+				height: 21px;
+				color: #525660;
+				background: #dfecf4;
+				padding-right: 25px;
+				font-size: 14px;
+				border: 1px solid transparent;
+				&:focus + .icon-revise{
+					
+				}
+			}
+			.icon-revise{
+				position: absolute;
+				margin-left: -20px;
+				width: 20px;
+				height: 21px;
+				background: url("@{img_url}/revise.png") no-repeat center;
+				background-size: 15px 15px;
+			}
+		}
+	}
+	.slide_nav{
+		ul{
+			.item{
+				line-height: 44px;
+				font-size: 15px;
+				position: relative;
+				color: #787d89;
+				background: #eceff6;
+				padding-left: 64px;
+				border-top: 1px solid transparent;
+				border-bottom: 1px solid transparent;
+				&.active{
+					background: #fff;
+					border-top: 1px solid #cdd1da;
+					border-bottom: 1px solid #cdd1da;
+				}
+				&:before{
+					content: '';
+					position: absolute;
+					display: inline-block;
+					width: 64px;
+					height: 44px;
+					margin-left: -64px;
+				}
+				&:after{
+					content: '';
+					position: absolute;
+					width: 20px;
+					right: 0;
+					top: 0;
+					height: 44px;
+					background: url("@{img_url}/arrow_right.png") no-repeat left center;
+					background-size: 6px 12px;
+				}
+				&.order{
+					&:before{
+						background: url("@{img_url}/schedule.png") no-repeat center;
+						background-size: 18px 16px;
+					}
+				}
+				&.schedule{
+					&:before{
+						background: url("@{img_url}/schedule.png") no-repeat center;
+						background-size: 18px 16px;
+					}
+				}
+				&.student{
+					&:before{
+						background: url("@{img_url}/student.png") no-repeat center;
+						background-size: 17px 20px;
+					}
+				}
+				&.message{
+					&:before{
+						background: url("@{img_url}/device.png") no-repeat center;
+						background-size: 17px 19px;
+					}
+				}
+				&.psw{
+					&:before{
+						background: url("@{img_url}/psw.png") no-repeat center;
+						background-size: 12px 16px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.icon{
+
+}

@@ -1,0 +1,62 @@
+/*
+ * 忘记密码页
+*/
+
+@import "../variable"; //变量部分
+@import "../common/common"; //公用样式
+@import "../component/header-sub";
+@import "../component/header-search";
+@import "../component/nav";
+@import "./login";
+
+.dialog-wrapper{
+	.dialog{
+		background: #fff;
+		.content{
+			.item{
+				.inner{
+					margin: 18px 0;
+					.text{
+						padding-left: 8px;
+						&.small{
+							width: 147px;
+							border-right: 0;
+							border-top-right-radius: 0;
+							border-bottom-right-radius: 0;
+						}
+					}
+					&.inner_login{
+						margin-top: 30px;
+						margin-bottom: 0;
+					}
+					.title{
+						font-size: 14px;
+						color: #666666;
+					}
+					.right{
+						font-size: 0;
+						.login{
+							font-size: 12px;
+							line-height: 1;
+							color: @col_main;
+						}
+						.register{
+							font-size: 12px;
+							line-height: 1;
+							color: @col_main;
+							&:before{
+								content: '';
+								display: inline-block;
+								position: relative;
+								top: 2px;
+								margin-left: 7px;
+								padding: 10px 0 2px 7px;
+								border-left: 1px solid #cfcfcf;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,75 @@
+@@include("../include/组件-公共head.html", {
+	"title": "我的订单",
+	"css": "page/per_center_order"
+})
+<body>
+	<!-- 头部 -->
+	@@include("../include/组件-头部-登录注册.html")
+	<!-- /头部 -->
+	
+	<!-- 个人中心主体内容 -->
+		<div class="container_wrapper">
+			<!-- 左侧导航 -->
+			@@include("../include/组件-左侧导航栏.html")
+			<!-- /左侧导航 -->
+			<!-- 右侧内容 -->
+			<div class="section">
+				<div class="panel">
+					<div class="panel-header">
+						<h3 class="title">
+							我的订单
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="tab">
+							<div class="inner active">
+								<a href="javascript:;">全部</a>
+							</div>
+							<div class="inner">
+								<a href="javascript:;">待支付</a>
+							</div>
+							<div class="inner">
+								<a href="javascript:;">已支付</a>
+							</div>
+							<div class="inner">
+								<a href="javascript:;">已取消</a>
+							</div>
+						</div>
+						<div class="table">
+							<div class="table-header">
+								<div class="table-row">
+									<div class="col1">订单编号</div>
+									<div class="col2">订单内容</div>
+									<div class="col3">订单金额</div>
+									<div class="col4">订单状态</div>
+									<div class="col5">下单时间</div>
+									<div class="col6">操作</div>
+									</div>
+								</div>
+								<div class="table-body">
+									<div class="table-row">
+										<div class="col1">R180413114233687</div>
+										<div class="col2">三年级语文精英班|学员：天马</div>
+										<div class="col3"><span>￥13500.00</span></div>
+										<div class="col4"><span class="status2">待支付</span></div>
+										<div class="col5">2018-4-3 15:50:40</div>
+										<div class="col6"><a href="javascript:;" class="desc">【查看详情】</a><a href="javascript:;" class="reset">【重新下载】</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+			<!-- /右侧内容 -->
+		</div>
+	<!-- /个人中心主体内容  -->
+	
+	<!--页脚-->
+	@@include("../include/组件-页脚.html")
+	<script>
+		$('.tab .inner').on('click', function() {
+			$('.tab .inner').removeClass('active');
+			$(this).addClass('active');
+		})
+	</script>
+</body>

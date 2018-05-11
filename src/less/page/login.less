@@ -1,0 +1,269 @@
+/*
+ * 登录页
+*/
+
+@import "../variable"; //变量部分
+@import "../common/common"; //公用样式
+@import "../component/header-sub";
+@import "../component/header-search";
+@import "../component/nav";
+
+.banner{
+	img{
+		width: 100%;
+	}
+}
+.dialog-wrapper{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9;
+	overflow: hidden;
+	.dialog{
+		width: 315px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding-top: 10px;
+		background: #f1f1f1;
+		border-top: 5px solid #09a7bb;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		.tab{
+			padding: 0 0 0 20px;
+			font-size: 0;
+			border-bottom: 1px solid #e5e5e5;	
+			& > div{
+				display: inline-block;
+				margin-bottom: -1px;
+				a{
+					display: block;
+					width: 88px;
+					text-align: center;
+					padding: 7px 0 7px 0;
+					color: #666;
+					font-size: 14px;
+					border: 1px solid transparent;
+					&.active{
+						background: #fff;
+						border: 1px solid #e5e5e5;
+						border-bottom-color: transparent;
+						color: @col_main;
+					}
+				}
+			}	
+		}
+		.content{
+			padding-bottom: 22px;
+			background: #fff;
+			.item{
+				transition: all 0.5s;
+				padding: 1px 32px 0 32px;
+				background: #fff;
+				&.item2{
+					display: none;
+				}
+				&.item1{
+					.inner{
+						.text{
+							&.tel{
+								width: 100%;
+								border: 1px solid #e5e5e5;
+								border-radius: 3px;
+							}
+						}
+					}
+				}
+				.inner{
+					margin: 22px 0;
+					position: relative;
+					font-size: 0;
+					&.inner_or{
+						margin-top: -10px;
+					}
+					&.inner_wq{
+						margin-bottom: 0;
+						text-align: center;
+					}
+					&.inner_login{
+						margin-top: -8px;
+					}
+					&.inner_check{
+						margin-top: -3px;
+					}
+					.icon{
+						width: 38px;
+						height: 34px;
+						position: absolute;
+						top: 0;
+						left: 0;
+						&.icon_tel{
+							background: url("@{img_url}/tel_focus.png") no-repeat center;
+							background-size: 13px 17px;
+						}
+						&.icon_psw{
+							background: url("@{img_url}/psw.png") no-repeat center;
+							background-size: 12px 16px;
+						}
+					}
+					.text{
+						width: 100%;
+						height: 34px;
+						box-sizing: border-box;
+						font-size: 12px;
+						line-height: 1;
+						padding: 11px 0 11px 38px;
+						color: #b2b2b2;
+						border: 1px solid #e5e5e5;
+						border-radius: 3px;
+						&.tel{
+							width: 147px;
+							border-right: 0;
+							border-top-right-radius: 0;
+							border-bottom-right-radius: 0;
+							&:focus+.icon_tel{
+								background: url("@{img_url}/tel_focus.png") no-repeat center;
+								background-size: 13px 17px;
+							}
+						}
+						&.input_code{
+							width: 130px;
+							padding-left: 8px;
+						}
+						&:focus{
+							border: 1px solid @col_main;
+						}
+						&:focus+.icon_psw{
+							background: url("@{img_url}/psw_focus.png") no-repeat center;
+							background-size: 12px 16px;
+						}
+					}
+					.send{
+						display: inline-block;
+						width: 104px;
+						text-align: center;
+						border-top-right-radius: 3px;
+						border-bottom-right-radius: 3px;
+						font-size: 12px;
+						color: #fff;
+						padding: 11px 0;
+						line-height: 1;
+						background: @col_main;
+					}
+					
+					.code{
+						display: inline-block;
+						width: 104px;
+						float: right;
+						line-height: 32px;
+						box-sizing: border-box;
+						border: 1px solid #dbdbdb;
+						border-radius: 1px;
+						vertical-align: 5px;
+						text-align: center;
+						& > img{
+							display: inline;
+							margin: 0 auto;
+							max-width: 100%;
+							max-height: 100%;
+							vertical-align: middle;
+						}
+					}
+					#check{
+						position: absolute;
+						clip: rect(0, 0, 0, 0);
+						&+label{
+							padding-left: 22px;
+							font-size: 12px;
+							color: #999999;
+							&:before{
+								content: '';
+								position: absolute;
+								margin-left: -22px;
+								width: 15px;
+								height: 16px;
+							}
+						}
+						&:checked{
+							&+label{
+								&:before{
+									background: url("@{img_url}/check_checked.png") no-repeat center;
+									background-size: 15px 15px;
+								}
+							}
+						}
+					}
+					.submit{
+						width: 100%;
+						text-align: center;
+						font-size: 16px;
+						line-height: 1;
+						padding: 10px 0;
+						border-radius: 2px;
+						color: #fff;
+						background: @col_main;
+						cursor: pointer;
+					}
+					.left{
+						font-size: 12px;
+						color: @col_main;
+					}
+					.right{
+						float: right;
+						font-size: 12px;
+						color: @col_main;
+					}
+					.or{
+						font-size: 12px;
+						color: #d9d8d8;
+						&:before, &:after{
+							content: '';
+							display: inline-block;
+							width: 102px;
+							margin-bottom: 4px;
+							border-top: 1px solid #d9d8d8;
+						}
+						&:before{
+							margin-right: 14px;
+						}
+						&:after{
+							margin-left: 14px;
+						}
+					}
+					.wx{
+						display: inline-block;
+						width: 46px;
+						height: 46px;
+						margin-right: 26px;
+						background: url("@{img_url}/wx.png") no-repeat;
+					}
+					.qq{
+						display: inline-block;
+						width: 46px;
+						height: 46px;
+						background: url("@{img_url}/qq.png") no-repeat;
+					}
+					.tip{
+						display: inline-block;
+						height: 36px;
+						position: absolute;
+						margin: -36px 0 0 -134px;
+						white-space: nowrap;
+						background: url("@{img_url}/tip.png") no-repeat;
+						background-size: contain;
+						span{
+							display: inline-block;
+							font-size: 12px;
+							color: #ec6941;
+							line-height: 1;
+							padding: 6px 12px 4px 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

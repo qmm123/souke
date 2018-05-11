@@ -1,0 +1,49 @@
+@@include("../include/组件-公共head.html", {
+	"title": "登陆",
+	"css": "page/forget_psw"
+})
+<body>
+	<!-- 头部 -->
+	@@include("../include/组件-头部-登录注册.html")
+	<!-- /头部 -->
+	<div class="banner">
+		<img src="../img/banner.png" alt="">
+	</div>
+	<!-- 登录弹窗 -->
+	<div class="dialog-wrapper">
+		<div class="dialog">
+			<div class="content">
+				<div class="item">
+					<div class="inner">
+						<div class="right">
+							<a href="javascript:;" class="login">登录</a>
+							<a href="javascript:;" class="register">注册</a>
+						</div>
+						<h3 class="title">忘记密码</h3>
+					</div>
+					<form action="" method="get">
+						<div class="inner">
+							<input type="text" class="text" placeholder="请输入手机号" maxlength="11">
+						</div>
+						<div class="inner">
+							<input type="text" class="text small" placeholder="请输入验证码"  name="">
+							<a href="javascript:;" class="send">发送验证码</a>
+							<!-- <div class="tip"><span>密码错误,请重新输入</span></div> -->
+						</div>
+						<div class="inner">
+							<input type="text" class="text" placeholder="请输入新密码" class="input_code" name="">
+						</div>
+						<div class="inner">
+							<input type="text" class="text" placeholder="请再次输入新密码" class="" name="">
+						</div>
+						<div class="inner inner_login">
+							<input type="submit" class="submit" name="" value="修改密码">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--页脚-->
+	@@include("../include/组件-页脚.html")
+</body>

@@ -1,0 +1,50 @@
+@@include("../include/组件-公共head.html", {
+	"title": "登陆",
+	"css": "page/registry"
+})
+<body>
+	<!-- 头部 -->
+	@@include("../include/组件-头部-登录注册.html")
+	<!-- /头部 -->
+	<div class="banner">
+		<img src="../img/banner.png" alt="">
+	</div>
+	<!-- 登录弹窗 -->
+	<div class="dialog-wrapper">
+		<div class="dialog">
+			<div class="content">
+				<div class="item">
+					<div class="inner">
+						<div class="right">
+							我已注册,<a href="javascript:;">直接登录></a>
+						</div>
+						<h3 class="title">注册\Register</h3>
+					</div>
+					<form action="" method="get">
+						<div class="inner">
+							<input type="text" class=" text" placeholder="请输入手机号" maxlength="11">
+						</div>
+						<div class="inner">
+							<input type="text" class="text input_code" placeholder="请输入验证码" class="input_code" name="">
+							<a href="javascript:;" class="code"><img src="../img/code.png" alt=""></a>
+						</div>
+						<div class="inner">
+							<input type="text" class=" text" placeholder="请输入密码">
+						</div>
+						<div class="inner">
+							<input type="text" class=" text" placeholder="请再次输入密码">
+						</div>
+						<div class="inner inner_check">
+							<input type="checkbox" id="check" name=""><label for="check">我接受并同意<span>《用户服务条款》</span></label>
+						</div>
+						<div class="inner inner_login">
+							<input type="submit" class="submit" name="" value="立即注册">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--页脚-->
+	@@include("../include/组件-页脚.html")
+</body>

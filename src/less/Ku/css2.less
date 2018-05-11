@@ -1,0 +1,106 @@
+//== 浮动
+//
+//## float
+.fl(){
+  float: left;
+}
+.fr(){
+  float: right;
+}
+
+//== input输入框
+//
+//## input输入框
+.input(@w:300px; @h:18px; @lin-h:@h; @col:#666){
+    width: @w;
+    height: @h;
+    line-height: @lin-h;
+    color:@col;
+}
+
+//== 边框
+//
+//## 边框
+
+// 四条边
+.border(@w:1px; @sty:solid; @col:#ccc;){
+  border: @w @sty @col;
+}
+
+// 一条边
+.bor-t(@w:1px; @sty:solid; @col:#ccc;){
+  border-top: @w @sty @col;
+}
+
+.bor-r(@w:1px; @sty:solid; @col:#ccc;){
+  border-right: @w @sty @col;
+}
+
+.bor-b(@w:1px; @sty:solid; @col:#ccc;){
+  border-bottom: @w @sty @col;
+}
+
+.bor-l(@w:1px; @sty:solid; @col:#ccc;){
+  border-left: @w @sty @col;
+}
+
+
+//== 隐藏
+//
+//## display
+.hide(){
+  display: none;
+}
+
+//== 三角画法
+//
+//## 边框附加内容
+
+.triangle-compatible(){
+    width: 0; height: 0; overflow:hidden;
+}
+
+//单独方向
+// 向上
+.triangle-t(@w:5px; @col:#ccc){
+  border-style:dashed dashed solid dashed;
+  border-color:transparent transparent @col transparent;
+  border-width:@w;
+  .triangle-compatible();
+}
+// 向下
+.triangle-b(@w:5px; @col:#ccc){
+  border-style:solid dashed dashed dashed;
+  border-color:@col transparent transparent transparent;
+  border-width:@w;
+  .triangle-compatible();
+}
+// 向左
+.triangle-l(@w:5px; @col:#ccc){
+  border-style:dashed solid dashed dashed;
+  border-color:transparent @col transparent transparent;
+  border-width:@w;
+  .triangle-compatible();
+}
+// 向右
+.triangle-r(@w:5px; @col:#ccc){
+  border-style:dashed dashed dashed solid;
+  border-color:transparent transparent transparent @col;
+  border-width:@w;
+  .triangle-compatible();
+}
+
+// 清除浮动
+.clearfix (){
+  display: block;
+  zoom: 1;
+
+  &:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,72 @@
+{
+    "status": true,
+    "msg": "操作成功",
+    "result": {
+        "data": {
+            "categories_two": [
+                {
+                    "id": "7bb908244cc642f7bb31a96009ca9345", 
+                    "name": "一年级", 
+                    "category_id": "d9579e1da4e9fecf28f0eafca835e91a", 
+                    "sort": "0"
+                }, 
+                {
+                    "id": "dd59cbefd3f6418f95c0c534ebcf5d6e", 
+                    "name": "三年级", 
+                    "category_id": "7fac404d11b7c66f8584a776934b49dc", 
+                    "sort": "0"
+                }, 
+                {
+                    "id": "95d8599da5724448baf837afad7585b1", 
+                    "name": "二年级", 
+                    "category_id": "fcf44a299dabcdcc9bee77c3a3b1473b", 
+                    "sort": "0"
+                }, 
+                {
+                    "id": "34e057f5602f462abb7df73e3540b927", 
+                    "name": "五年级", 
+                    "category_id": "c8631ec5be2f8765a9d8005060bfb71c", 
+                    "sort": "0"
+                }, 
+                {
+                    "id": "6b0fe1577e754e7c91fb3506e96e560a", 
+                    "name": "六年级", 
+                    "category_id": "5bffe2a374fb13e10a525d00c8e21f43", 
+                    "sort": "0"
+                }, 
+                {
+                    "id": "c22e5e8a90064c339131ebbf6821b314", 
+                    "name": "四年级", 
+                    "category_id": "0faa287c2fa2520fd061bb7d119170e6", 
+                    "sort": "0"
+                }
+            ], 
+            "categories_three": [ 
+                {
+                    "id": "7bb908244cc642f7bb31a96009ca9345", 
+                    "name": "一年级", 
+                    "category_id": "d9579e1da4e9fecf28f0eafca835e91a", 
+                    "sort": "0"
+                }, 
+                {
+                    "id": "dd59cbefd3f6418f95c0c534ebcf5d6e", 
+                    "name": "三年级", 
+                    "category_id": "7fac404d11b7c66f8584a776934b49dc", 
+                    "sort": "0"
+                }, 
+                {
+                    "id": "95d8599da5724448baf837afad7585b1", 
+                    "name": "二年级", 
+                    "category_id": "fcf44a299dabcdcc9bee77c3a3b1473b", 
+                    "sort": "0"
+                }, 
+                {
+                    "id": "34e057f5602f462abb7df73e3540b927", 
+                    "name": "五年级", 
+                    "category_id": "c8631ec5be2f8765a9d8005060bfb71c", 
+                    "sort": "0"
+                }
+            ]
+        }
+    }
+}

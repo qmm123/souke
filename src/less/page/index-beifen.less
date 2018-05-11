@@ -1,0 +1,210 @@
+// 初始代码备份
+/**
+ * 购买应用支付页面&支付成功页面
+ */
+
+@import "../common/common"; //公用样式
+@import "../component/radio_check_box"; //单选多选框
+
+/**
+ * 支付标题部分
+ */
+.pay_title_folder{
+	border-bottom: 2px solid #39b9fe;
+	margin: 0 0 45px 0;
+	// 支付标题和步骤
+	.pay_title{
+		overflow: hidden;
+		padding: 25px 0 22px 0;
+		.logo{
+			float: left;
+		}
+		.pay_step{
+			float: right;
+			li{
+				width: 89px;
+				height: 26px;
+				line-height: 26px;
+				color: @col_999;
+				text-align: center;
+				float: left;
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				margin: 0 4px 0 0;
+				&.last{
+					margin-right: 0;
+				}
+				// 各个步骤
+				&.step1{
+					color: #fff;
+					background-image: url("@{img_url}/pay_title_step1_on.png");
+				}
+				&.step2{
+					color: #fff;
+					background-image: url("@{img_url}/pay_title_step2_on.png");
+				}
+				&.step3{
+					background-image: url("@{img_url}/pay_title_step3.png");
+					&.on{
+						color: #fff;
+						background-image: url("@{img_url}/pay_title_step3_on.png");
+					}
+				}
+			}
+		}
+	}
+}
+
+/**
+ * 支付详情部分
+ */
+.pay_detail_folder{
+	margin: 0 0 115px 0;
+	&.mar_b_less{
+		margin-bottom: 20px;
+	}
+	.pay_detail_zone{
+		background: @col_bgc_gray_f5;
+		border: 1px solid #e7e7e7;
+	}
+	// 标题部分
+	.pay_tit{
+		color: @col_666;
+		border-bottom: 1px solid #e7e7e7;
+		padding: 13px 19px 13px 19px;
+		// 支付成功
+		&.success{
+			font-size: 18px;
+			color: @col_333;
+			background: url("@{img_url}/icon_pay_success.png") no-repeat 15px center;
+			padding-left: 59px;
+		}
+	}
+	// 内容部分
+	.pay_content{
+		padding-bottom: 40px;
+		&.pad_b_less{
+			padding-bottom: 0px;
+		}
+		// 公用填充部分
+		.menu_infor,.pay_hui_zone{
+			padding-right: 70px;
+			padding-left: 40px;
+		}
+		// 订单信息部分
+		.menu_infor{
+			background: #fff;
+			border-bottom: 1px solid #e7e7e7;
+			padding-top: 18px;
+			&.bor_none{
+				border: none;
+			}
+			h1{
+				font-size: 18px;
+				font-weight: bold;
+				color: @col_333;
+				margin: 0 0 15px 0;
+			}
+			ul{
+				padding-bottom: 15px;
+				li{
+					color: @col_999;
+					margin: 15px 0 0 0;
+				}
+			}
+		}
+		// 支付详情&优惠部分
+		.pay_hui_zone{
+			background: @col_bgc_gray_f5;
+			padding-top: 20px;
+			// 标题部分
+			h2{
+				color: @col_666;
+				padding-bottom: 20px;
+			}
+			// 底边虚线部分
+			.bor_b_dash{
+				border-bottom: 1px dashed #d7d7d7;
+				padding: 0 0 25px 0;
+				margin: 0 0 25px 0;
+			}
+			// 优惠部分
+			.hui_zone{
+				select{
+					width: 430px;
+					height: 44px;
+					border: 1px solid #e7e7e7;
+				}
+			}
+			// 余额部分
+			.money_leave{
+				overflow: hidden;
+			}
+			// 支付方式部分
+			.pay_method{
+				h2{
+					color: @col_333;
+					padding-top: 10px;
+				}
+				// 支付方式列表
+				.pay_list{
+					padding: 10px 0 0 0;
+					margin: 0 0 0 30px;
+					li{
+						padding: 4px 0 4px 5px;
+					}
+				}
+			}
+			// 去支付部分
+			.pay_go_zone{
+				text-align: right;
+				.money{
+					color: #f6704c;
+					margin: 0 0 20px 0;
+					i{
+						font-style: normal;
+						font-size: 24px;
+						font-weight: bold;
+						padding: 0 0 0 10px;
+					}
+					span{
+						font-size: 30px;
+						font-weight: bold;
+					}
+				}
+				.pay_btn{
+					font-size: 20px;
+					color: #fff;
+					background: #f7704c;
+					transition: all .3s;
+					display: inline-block;
+					cursor: pointer;
+					border-radius: 2px;
+					padding: 10px 40px;
+					&:hover{
+						background-color: #f14e22;
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+/**
+ * 支付成功提示部分
+ */
+.pay_tips_folder{
+	text-align: center;
+	margin: 0 0 150px 0;
+	.tip{
+		color: #ea3a3a;
+	}
+	.para{
+		margin: 25px 0 0 0;
+		a{
+			color: #39b9fe;
+			text-decoration: underline;
+		}
+	}
+}

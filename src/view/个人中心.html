@@ -69,20 +69,4 @@
 	
 	<!--页脚-->
 	@@include("../include/组件-页脚.html")
-	<script>
-		$('.icon-revise').on('click', function() {
-			var width = $('.input').css('width');
-			var html = $('.input').html();
-			var str = '<input class="input" value="'+html+'">';
-			$('.input').replaceWith(str);
-			$('.input').css('width', width);
-			$('.input')[0].focus();
-		})
-		$('.slide').on('blur', '.input',function() {
-			var val = $(this).val();
-			var width = $(this).css('width');
-			var str = '<div class="input">'+val+'</div>';
-			$(this).replaceWith(str);
-		})
-	</script>
 </body>
